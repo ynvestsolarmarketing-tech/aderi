@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADERI</title>
+    <meta name="description" content="Site da ADERI" />
+    <meta property="og:title" content="ADERI" />
+    <meta property="og:description" content="Site da ADERI" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://seusite.com.br" />
+    <meta property="og:image" content="https://seusite.com.br/og-image.jpg" />
+    <!-- Google Analytics (Exemplo) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; width: 100%; background: #0e171f; color: #fff; padding: 1rem; text-align: center; z-index: 9999; display: none;">
+      Utilizamos cookies para melhorar sua experiência. Ao continuar, você concorda com nossa <a href="/privacidade.html" style="color: #a9f041;">Política de Privacidade</a>.
+      <button onclick="document.getElementById('cookie-banner').style.display='none'; localStorage.setItem('cookieAccepted', 'true');" style="margin-left: 1rem; background: #a9f041; color: #0e171f; border: none; padding: 0.5rem 1rem; cursor: pointer; font-weight: bold; border-radius: 4px;">Entendi</button>
+    </div>
+    <script>
+      if (!localStorage.getItem('cookieAccepted')) {
+        document.getElementById('cookie-banner').style.display = 'block';
+      }
+    </script>
+  </body>
+</html>

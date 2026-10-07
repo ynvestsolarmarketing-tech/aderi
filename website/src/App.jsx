@@ -5,8 +5,10 @@ import Home from './pages/Home';
 
 import ComoFunciona from './pages/ComoFunciona';
 import Parceiros from './pages/Parceiros';
+import CtaAdesao from './components/CtaAdesao';
 import Faq from './pages/Faq';
 import Blog from './pages/Blog';
+import DevModal from './components/DevModal';
 
 function App() {
   return (
@@ -22,6 +24,9 @@ function App() {
         <div id="parceiros">
           <Parceiros />
         </div>
+        <div id="cta-adesao">
+          <CtaAdesao />
+        </div>
         <div id="faq">
           <Faq />
         </div>
@@ -30,6 +35,7 @@ function App() {
         </div>
       </main>
       <Footer />
+      <DevModal />
     </>
   );
 }

@@ -3,36 +3,41 @@ import React from 'react';
 function Parceiros() {
   return (
     <>
-      <section style={{ background: 'var(--color-dark)', color: 'var(--color-text-inverse)', padding: '8rem 0 0' }}>
+      <section style={{ background: '#74b814', color: '#ffffff', padding: '8rem 0 0' }}>
         <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', alignItems: 'center', marginBottom: '4rem' }}>
           <div>
-            <p style={{ color: 'var(--color-text-muted)', fontSize: '0.875rem', fontWeight: 600, letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '1rem' }}>Torne-se um Parceiro</p>
-            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 700, letterSpacing: '-1px', lineHeight: 1.2 }}>
-              Aproveitando o poder do sol para construir um futuro sustentável
+            <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: '0.875rem', fontWeight: 600, letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '1rem' }}>Para donos de usinas</p>
+            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, letterSpacing: '-1px', lineHeight: 1.1, color: '#ffffff', textTransform: 'uppercase' }}>
+              Maximize a rentabilidade da sua usina sem dor de cabeça
             </h2>
+            <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: '1.1rem', lineHeight: 1.6, marginTop: '1.5rem' }}>
+              Nós fazemos a gestão comercial da sua energia e garantimos a alocação dos créditos. Você aumenta seus lucros com risco zero de inadimplência.
+            </p>
             <button style={{ 
-              background: 'transparent', color: 'var(--color-primary)', border: '1px solid var(--color-primary)', 
+              background: '#ffffff', color: '#0e171f', border: 'none', 
               padding: '1rem 2rem', borderRadius: '4px', fontSize: '0.9rem', fontWeight: 700,
               cursor: 'pointer', marginTop: '2rem'
-            }}>
+            }}
+            onClick={() => window.dispatchEvent(new CustomEvent('show-dev-modal'))}
+            >
               Seja Parceiro →
             </button>
           </div>
           
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-            <div style={{ background: 'var(--color-primary)', color: 'var(--color-dark)', padding: '2rem', borderRadius: '16px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', height: '200px' }}>
-              <span style={{ fontSize: '2.5rem', fontWeight: 800 }}>+30%</span>
-              <span style={{ fontSize: '0.875rem', fontWeight: 600 }}>Rentabilidade extra</span>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+            <div style={{ background: 'rgba(255, 255, 255, 0.1)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)', border: '1px solid rgba(255, 255, 255, 0.2)', color: '#ffffff', padding: '2rem', borderRadius: '24px', display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '220px', boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)' }}>
+              <span style={{ fontSize: 'clamp(2.5rem, 4vw, 3.5rem)', fontWeight: 900, lineHeight: 1 }}>+30%</span>
+              <span style={{ fontSize: '1.1rem', fontWeight: 500, marginTop: '0.5rem', opacity: 0.9 }}>Rentabilidade extra</span>
             </div>
-            <div style={{ background: 'var(--color-bg)', color: 'var(--color-dark)', padding: '2rem', borderRadius: '16px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', height: '200px' }}>
-              <span style={{ fontSize: '2.5rem', fontWeight: 800 }}>100%</span>
-              <span style={{ fontSize: '0.875rem', fontWeight: 600 }}>Gestão centralizada</span>
+            <div style={{ background: 'rgba(255, 255, 255, 0.1)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)', border: '1px solid rgba(255, 255, 255, 0.2)', color: '#ffffff', padding: '2rem', borderRadius: '24px', display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '220px', boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)' }}>
+              <span style={{ fontSize: 'clamp(2.5rem, 4vw, 3.5rem)', fontWeight: 900, lineHeight: 1 }}>100%</span>
+              <span style={{ fontSize: '1.1rem', fontWeight: 500, marginTop: '0.5rem', opacity: 0.9 }}>Gestão centralizada</span>
             </div>
-            <div style={{ background: 'var(--color-secondary)', color: 'var(--color-dark)', padding: '2rem', borderRadius: '16px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', height: '200px' }}>
-              <span style={{ fontSize: '2.5rem', fontWeight: 800 }}>0%</span>
-              <span style={{ fontSize: '0.875rem', fontWeight: 600 }}>Inadimplência repassada</span>
+            <div style={{ background: 'rgba(255, 255, 255, 0.1)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)', border: '1px solid rgba(255, 255, 255, 0.2)', color: '#ffffff', padding: '2rem', borderRadius: '24px', display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '220px', boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)' }}>
+              <span style={{ fontSize: 'clamp(2.5rem, 4vw, 3.5rem)', fontWeight: 900, lineHeight: 1 }}>0%</span>
+              <span style={{ fontSize: '1.1rem', fontWeight: 500, marginTop: '0.5rem', opacity: 0.9 }}>Risco de inadimplência</span>
             </div>
-            <div style={{ background: 'url("/images/hero.jpg") center/cover', borderRadius: '16px', height: '200px' }}>
+            <div style={{ background: 'url("/images/panoramic.jpg") center/cover', borderRadius: '24px', height: '220px', boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)', border: '1px solid rgba(255, 255, 255, 0.2)' }}>
             </div>
           </div>
         </div>

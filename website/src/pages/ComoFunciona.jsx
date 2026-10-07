@@ -97,9 +97,7 @@ function ComoFunciona() {
         </motion.h2>
       </div>
       
-      <section 
-        style={{ display: 'flex', minHeight: '600px', width: '100%', overflow: 'hidden' }}
-      >
+      <section className="pillars-container">
         {pillars.map((pillar) => {
           const isActive = activeCard === pillar.id;
           return (
@@ -107,58 +105,46 @@ function ComoFunciona() {
               key={pillar.id}
               onClick={() => setActiveCard(pillar.id)}
               onMouseEnter={() => setActiveCard(pillar.id)}
+              className={`pillar-card ${isActive ? 'active' : ''}`}
               style={{ 
-                flex: isActive ? '3' : '1', 
                 background: pillar.bg, 
-                padding: '4rem 2rem', 
-                display: 'flex', 
-                flexDirection: 'column', 
-                justifyContent: 'flex-start', 
                 color: pillar.color,
-                transition: 'flex 0.6s cubic-bezier(0.25, 1, 0.5, 1)',
-                cursor: 'pointer',
-                position: 'relative',
                 borderRight: '1px solid var(--color-border)'
               }}
             >
-              {isActive && (
-                <div style={{ animation: 'fadeIn 0.6s ease forwards', display: 'flex', flexDirection: 'column', gap: pillar.hasBoxes ? '2rem' : '0' }}>
-                  {pillar.hasBoxes ? (
-                    <>
-                      <div>
-                        <h3 style={{ fontSize: 'clamp(1.5rem, 2vw, 2.5rem)', fontWeight: 800, marginBottom: '1rem', lineHeight: 1.1, letterSpacing: '-1px', textTransform: 'uppercase' }}>
-                          {pillar.title}
-                        </h3>
-                        <p style={{ fontSize: '1.1rem', opacity: 0.9, lineHeight: 1.6 }}>
-                          {pillar.desc}
-                        </p>
-                      </div>
-                      <div style={{ 
-                        width: '100%', 
-                        height: '260px', 
-                        background: `url("${pillar.image}") center/cover`, 
-                        borderRadius: '24px',
-                        boxShadow: '0 10px 40px rgba(0,0,0,0.08)'
-                      }}></div>
-                    </>
-                  ) : (
-                    <>
-                      <h3 style={{ fontSize: 'clamp(1.5rem, 2vw, 2.5rem)', fontWeight: 700, marginBottom: '1rem', lineHeight: 1.2, letterSpacing: '-1px', textTransform: 'uppercase' }}>
+              <div className="pillar-content" style={{ animation: 'fadeIn 0.6s ease forwards', display: 'flex', flexDirection: 'column', gap: pillar.hasBoxes ? '2rem' : '0' }}>
+                {pillar.hasBoxes ? (
+                  <>
+                    <div>
+                      <h3 style={{ fontSize: 'clamp(1.5rem, 2vw, 2.5rem)', fontWeight: 800, marginBottom: '1rem', lineHeight: 1.1, letterSpacing: '-1px', textTransform: 'uppercase' }}>
                         {pillar.title}
                       </h3>
-                      <p style={{ fontSize: '1rem', opacity: 0.8, maxWidth: '300px' }}>
+                      <p style={{ fontSize: '1.1rem', opacity: 0.9, lineHeight: 1.6 }}>
                         {pillar.desc}
                       </p>
-                    </>
-                  )}
-                </div>
-              )}
+                    </div>
+                    <div className="pillar-image" style={{ 
+                      width: '100%', 
+                      background: `url("${pillar.image}") center/cover`, 
+                      borderRadius: '24px',
+                      boxShadow: '0 10px 40px rgba(0,0,0,0.08)'
+                    }}></div>
+                  </>
+                ) : (
+                  <>
+                    <h3 style={{ fontSize: 'clamp(1.5rem, 2vw, 2.5rem)', fontWeight: 700, marginBottom: '1rem', lineHeight: 1.2, letterSpacing: '-1px', textTransform: 'uppercase' }}>
+                      {pillar.title}
+                    </h3>
+                    <p style={{ fontSize: '1rem', opacity: 0.8, maxWidth: '300px' }}>
+                      {pillar.desc}
+                    </p>
+                  </>
+                )}
+              </div>
               
-              <span style={{ 
-                fontSize: 'clamp(4rem, 6vw, 8rem)', 
+              <span className="pillar-number" style={{ 
                 fontWeight: 800, 
                 lineHeight: 1, 
-                opacity: isActive ? 1 : 0.5, 
                 textShadow: pillar.shadow ? '0 4px 20px rgba(0,0,0,0.1)' : 'none',
                 marginTop: 'auto',
                 paddingTop: '2rem'

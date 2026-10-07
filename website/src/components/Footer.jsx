@@ -20,9 +20,9 @@ function Footer() {
 
   return (
     <footer style={{ background: '#ffffff', padding: '6rem 0 3rem', color: '#334155', borderTop: '1px solid #e2e8f0' }}>
-      <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '4rem', marginBottom: '4rem' }}>
-        <div>
-          <a href="#home">
+      <div className="container footer-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '4rem', marginBottom: '4rem' }}>
+        <div className="footer-col-1">
+          <a href="#home" className="footer-logo">
             <img src={logo} alt="Logotipo da ADERI Energia Solar por Assinatura" style={{ height: '50px', marginBottom: '2rem' }} />
           </a>
           <p style={{ fontWeight: 700, marginBottom: '1rem', color: '#74b814', textTransform: 'uppercase' }}>Contato</p>
@@ -62,7 +62,7 @@ function Footer() {
         </div>
       </div>
 
-      <div className="container" style={{ borderTop: '1px solid #e2e8f0', paddingTop: '2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
+      <div className="container footer-bottom" style={{ borderTop: '1px solid #e2e8f0', paddingTop: '2rem', display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
         <p style={{ color: '#64748b', fontSize: '0.875rem' }}>
           &copy; {new Date().getFullYear()} ADERI Energia. Todos os direitos reservados.
         </p>

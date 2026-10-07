@@ -49,23 +49,23 @@ function Blog() {
     <>
       {/* Marquee (Scrolling text) */}
       <section style={{ padding: '2rem 0', background: 'var(--color-bg)', borderTop: '1px solid rgba(0,0,0,0.05)', overflow: 'hidden' }}>
-        <div 
-          style={{ whiteSpace: 'nowrap', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '2rem', color: '#0f172a', fontWeight: 800, fontSize: '1.75rem', width: '100%', textTransform: 'uppercase' }}
-        >
-          {marqueeContent}
-          {marqueeContent}
+        <div className="marquee-container" style={{ width: '100%', display: 'flex' }}>
+          <div className="marquee-content">
+            <div style={{ display: 'flex', alignItems: 'center', gap: '2rem', paddingRight: '2rem' }}>{marqueeContent}</div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '2rem', paddingRight: '2rem' }}>{marqueeContent}</div>
+          </div>
         </div>
       </section>
 
       {/* Seção de Notícias/Blog */}
       <section style={{ padding: '8rem 0', background: 'var(--color-bg)' }}>
         <div className="container">
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '4rem' }}>
+          <div className="blog-header-container">
             <div>
               <p style={{ color: 'var(--color-text-muted)', fontWeight: 600, fontSize: '0.875rem', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '1rem' }}>Blog & Atualizações</p>
-              <h2 style={{ fontSize: '3rem', fontWeight: 800, letterSpacing: '-1px', color: 'var(--color-dark)', textTransform: 'uppercase' }}>Fique por dentro das novidades</h2>
+              <h2 style={{ fontSize: 'clamp(2.5rem, 6vw, 3rem)', fontWeight: 800, letterSpacing: '-1px', color: 'var(--color-dark)', textTransform: 'uppercase' }}>Fique por dentro das novidades</h2>
             </div>
-            <button style={{ background: '#0284c7', color: '#ffffff', padding: '1rem 2rem', border: 'none', borderRadius: '4px', fontWeight: 700, cursor: 'pointer' }} onClick={() => window.dispatchEvent(new CustomEvent('show-dev-modal'))}>
+            <button className="blog-view-all-btn" onClick={() => window.dispatchEvent(new CustomEvent('show-dev-modal'))}>
               Ver todas as matérias
             </button>
           </div>
@@ -118,7 +118,7 @@ function Blog() {
             </h2>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
+          <div className="feedback-grid">
             {/* Espaço para o vídeo horizontal (16:9) */}
             <div style={{ 
               width: '100%', 

@@ -69,22 +69,11 @@ function Home() {
               <span style={{ fontWeight: 800 }}>Economize</span> com energia renovável <span style={{ fontWeight: 800 }}>sem investimento</span>
             </h1>
             
-            <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', flexWrap: 'wrap', marginTop: '1rem' }}>
-              <button style={{ 
-                background: '#ffffff', color: '#0e171f', border: 'none', 
-                padding: '1.25rem 2rem', borderRadius: '8px', fontSize: '1rem', fontWeight: 700,
-                cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '1rem'
-              }}
-              onClick={() => window.dispatchEvent(new CustomEvent('show-dev-modal'))}
-              >
+            <div className="hero-buttons-container">
+              <button className="hero-button hero-btn-primary" onClick={() => window.dispatchEvent(new CustomEvent('show-dev-modal'))}>
                 Sobre nós <ArrowRight size={20} />
               </button>
-              <a href="#como-funciona" style={{ 
-                background: '#0284c7', color: '#ffffff', border: 'none', 
-                padding: '1.25rem 2rem', borderRadius: '8px', fontSize: '1rem', fontWeight: 700,
-                cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center',
-                textDecoration: 'none'
-              }}>
+              <a href="#como-funciona" className="hero-button hero-btn-secondary">
                 Como Funciona
               </a>
             </div>

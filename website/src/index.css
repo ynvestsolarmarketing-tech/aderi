@@ -405,17 +405,18 @@ a {
   .hero-buttons-container {
     flex-wrap: nowrap;
     width: 100%;
-    gap: 0.5rem;
+    gap: 0.4rem;
     align-items: stretch;
   }
   
   .hero-button {
     flex: 1;
-    padding: 1rem 0.5rem;
-    font-size: 0.85rem;
+    padding: 0.8rem 0.2rem;
+    font-size: 0.8rem;
     justify-content: center;
     text-align: center;
     height: auto;
+    letter-spacing: -0.5px;
   }
 }
 
